@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimization Results | Route Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%); 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card { 
+            background: #ffffff; 
+            width: 100%;
+            max-width: 520px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+            padding: 40px;
+            text-align: center;
+        }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: #dcfce7;
+            color: #15803d;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        h2 { font-size: 20px; color: #475569; font-weight: 600; }
+        .result-box { 
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .result-value { 
+            font-size: 36px; 
+            font-weight: 800; 
+            color: #2563eb; 
+            margin-top: 6px;
+        }
+        .btn-back { 
+            display: inline-block; 
+            padding: 12px 28px; 
+            background: #0f172a; 
+            color: #ffffff; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-back:hover { 
+            background: #1e293b;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="status-badge">Optimization Complete</div>
+        <h2>Recommended Route Decision</h2>
+        
+        <div class="result-box">
+            <span style="font-size: 13px; color: #64748b; font-weight: 600; text-transform: uppercase;">Predicted Target Route</span>
+            <div class="result-value">Route {{ prediction }}</div>
+        </div>
+
+        <a href="/predict" class="btn-back">Run Another Optimization</a>
+    </div>
+</body>
+</html>
